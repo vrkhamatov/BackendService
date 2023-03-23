@@ -35,7 +35,6 @@ public class BackendController {
     // command: //java -jar target/BackendService-0.0.1-SNAPSHOT.jar --path=C:\Users\khama\Desktop\LetiPrint\BackendService\src\main\resources\storage
    @GetMapping("/downloadFile")
    @ResponseBody
-   @ExceptionHandler
    private ResponseEntity<?> getFile(@RequestParam String fileId) {
        try {
            MetaData metaData = metaDataRepository.getMetaDataByFileId(fileId);
