@@ -31,11 +31,11 @@ public class JsonSerelizator {
         String json = null;
         Gson gson = new Gson();
         MetaData metaData1 = new MetaData();
-        metaData1.setFileId(metaData.getFileId());
-        metaData1.setUserId(metaData.getUserId().substring(1,metaData.getUserId().length()-1));
-        metaData1.setFileLink(metaData.getFileLink().substring(1,metaData.getFileLink().length()-1));
-        metaData1.setFileType(metaData.getFileType().substring(1,metaData.getFileType().length()-1));
-        metaData1.setFileName(metaData.getFileName().substring(1,metaData.getFileName().length()-1));
+        metaData1.setFileId(metaData);
+        metaData1.setUserId(metaData);
+        metaData1.setFileLink(metaData);
+        metaData1.setFileType(metaData);
+        metaData1.setFileName(metaData.getFileName);
         json = gson.toJson(metaData1);
         return json;
     }
