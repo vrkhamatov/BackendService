@@ -18,11 +18,11 @@ public class JsonSerelizator {
         String fileType = jsonObject.getAsJsonPrimitive("fileType").toString();
         String userId = jsonObject.getAsJsonPrimitive("userId").toString();
         MetaData metaDataFromJson = new MetaData();
-        metaDataFromJson.setUserId(userId.substring(0,userId.length()-1));
-        metaDataFromJson.setFileLink(fileLink.substring(0,fileLink.length()-1));
-        metaDataFromJson.setFileName(filename.substring(0,filename.length()-1));
+        metaDataFromJson.setUserId(userId);
+        metaDataFromJson.setFileLink(fileLink);
+        metaDataFromJson.setFileName(filename);
         metaDataFromJson.setFileId(Short.parseShort(fileId));
-        metaDataFromJson.setFileType(fileType.substring(0,fileType.length()-1));
+        metaDataFromJson.setFileType(fileType);
         return metaDataFromJson;
 
     }
